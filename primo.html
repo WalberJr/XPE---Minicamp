@@ -1,0 +1,52 @@
+<html>
+  
+<head>
+    <title>
+        Verificando se um número é primo usando Java
+    </title>
+      
+    <script type="text/javascript">
+      
+        // Função de verificação
+        function p() {
+              
+            var n, i, flag = true;
+              
+            // Input
+            n = document.myform.n.value;
+            n = parseInt(n)
+            for(i = 2; i <= n - 1; i++)
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+                  
+                // Output
+            if (flag == true)
+                alert(`O número ${n} é primo.`);
+            else
+                alert(`O número ${n} não é primo.`);
+        }
+    </script>
+</head>
+  
+<body>
+    <center>
+        <h1>XPE: Minicamp Dev & Data - Teste Prático</h1>
+       
+        <h2>Verificador de Número Primo</h2>
+
+        <h5>Autor: Walber G. Guimarães Júnior</h5>
+          
+        <hr color="Blue">
+          
+        <form name="myform">
+            Digite o número:
+            <input type="text" name=n value="">              
+            <input type="button" value="Verificar" onClick="p()">
+            <br>
+        </form>
+    </center>
+</body>
+  
+</html>
